@@ -67,8 +67,55 @@
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
             /* Removed italics here */
         }
-
-        /* Organizers Grid */
+        
+        /* Updated Organizers Section */
+        .organizers-grid { 
+            display: flex;
+            flex-direction: column; /* Stack cards vertically to give side-by-side content room */
+            gap: 20px; 
+            margin-top: 1.5rem; 
+        }
+        
+        .organizer-card { 
+            background: var(--white); 
+            padding: 1.5rem; 
+            border-radius: 12px; 
+            display: flex; /* This puts image and text side-by-side */
+            align-items: flex-start;
+            gap: 20px;
+            text-align: left; /* Changed from center */
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        
+        .organizer-card:hover { transform: translateX(5px); }
+        
+        .organizer-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%; /* Makes image circular */
+            object-fit: cover;
+            flex-shrink: 0; /* Prevents image from squishing */
+            border: 3px solid var(--light-bg);
+        }
+        
+        .organizer-name {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Mobile Responsiveness: Stack image on top of text on small screens */
+        @media (max-width: 600px) {
+            .organizer-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+        /* /* Organizers Grid */
         .organizers { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
@@ -86,7 +133,7 @@
             transition: transform 0.2s;
         }
         
-        .organizer-card:hover { transform: translateY(-5px); }
+        .organizer-card:hover { transform: translateY(-5px); } */
 
         /* Dates Table-style list */
         .important-dates {
@@ -160,8 +207,33 @@
         <p>The integration of machine learning into high-stakes decision-making in domains such as healthcare and autonomous systems has led to research to understand these decisions. While Explainable AI (XAI) has emerged as a dominant research area, the "explanation" is often treated as a technical byproduct rather than a human-oriented solution.</p>
         <p>This special session focuses on the intersection of soft computing and human-centric design. Soft computing techniques are uniquely positioned to bridge the gap between complex mathematical models and human linguistic reasoning. However, the true value of an explanation lies in its interpretability, relevance, and utility to the end-user.</p>
     </div>
-
     <h2>Organizers</h2>
+    <div class="organizers-grid">
+        <div class="organizer-card">
+            <img src="lynn-pickering.jpg" alt="Lynn Pickering" class="organizer-img">
+            <div class="organizer-info">
+                <div class="organizer-name">Lynn Pickering</div>
+                <div class="organizer-bio">Specially Appointed Assistant Professor at Osaka Metropolitan University. Her research focuses on explainable AI (XAI) and evolutionary fuzzy systems, specifically developing interpretable AI frameworks for safe human-centric applications.</div>
+            </div>
+        </div>
+    
+        <div class="organizer-card">
+            <img src="javier-andreu.jpg" alt="Javier Andreu-Perez" class="organizer-img">
+            <div class="organizer-info">
+                <div class="organizer-name">Javier Andreu-Perez</div>
+                <div class="organizer-bio">Reader (Associate Professor) in Human-Centred AI at the University of Essex and Chair of the Smart Health Technologies Group. A Senior Member of the IEEE, his research spans fundamental AI, healthcare informatics, and robotics.</div>
+            </div>
+        </div>
+    
+        <div class="organizer-card">
+            <img src="yusuke-nojima.jpg" alt="Yusuke Nojima" class="organizer-img">
+            <div class="organizer-info">
+                <div class="organizer-name">Yusuke Nojima</div>
+                <div class="organizer-bio">Professor at Osaka Metropolitan University. He specializes in evolutionary fuzzy systems and multiobjective optimization. He has served as Associate Editor for IEEE Computational Intelligence Magazine and chaired the IEEE CIS Task Force on Evolutionary Fuzzy Systems.</div>
+            </div>
+        </div>
+    </div>
+    <!-- <h2>Organizers</h2>
     <div class="organizers-grid">
         <div class="organizer-card">
             <div class="organizer-name">Lynn Pickering</div>
@@ -175,7 +247,7 @@
             <div class="organizer-name">Yusuke Nojima</div>
             <div class="organizer-bio">Professor at Osaka Metropolitan University. He specializes in evolutionary fuzzy systems and multiobjective optimization. He has served as Associate Editor for IEEE Computational Intelligence Magazine and chaired the IEEE CIS Task Force on Evolutionary Fuzzy Systems.</div>
         </div>
-    </div>
+    </div> -->
 
     <h2>Call for Papers</h2>
     <p>We invite contributions that explicitly place the human (domain expert, model designer or other end-user) at the center of the research. We also encourage submissions that are not fully there yet, but express an interest in this direction.</p>
