@@ -100,13 +100,27 @@
             border: 3px solid var(--light-bg);
         }
         
-        .organizer-name {
+        /* .organizer-name {
             font-weight: 700;
             color: var(--primary);
             font-size: 1.2rem;
             margin-bottom: 0.5rem;
+        } */
+        .organizer-name {
+        display: inline-block;
+        font-weight: 700;
+        color: var(--primary); /* Keeps the dark color as default */
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        text-decoration: none; /* Removes default underline */
+        transition: color 0.2s ease-in-out;
         }
         
+        .organizer-name:hover {
+            color: var(--accent); /* Turns blue when hovered */
+            text-decoration: underline;
+        }
+            
         /* Mobile Responsiveness: Stack image on top of text on small screens */
         @media (max-width: 600px) {
             .organizer-card {
@@ -143,14 +157,14 @@
             font-weight: 600;
         }
         
-        .organizer-link:hover {
+        /* .organizer-link:hover {
             text-decoration: underline;
-        }
+        } */
         
-        .organizer-link svg {
+        /* .organizer-link svg {
             vertical-align: middle;
             margin-right: 4px;
-        }
+        } */
         /* Dates Table-style list */
         .important-dates {
             background: #eff6ff;
@@ -228,27 +242,30 @@
         <div class="organizer-card">
             <img src="lynn-pickering.jpeg" alt="Lynn Pickering" class="organizer-img">
             <div class="organizer-info">
-                <div class="organizer-name">Lynn Pickering</div>
+                <a href="https://pickerln.github.io/" class="organizer-name" target="_blank">Lynn Pickering</a>
+                <!-- <div class="organizer-name">Lynn Pickering</div> -->
                 <div class="organizer-bio">Specially Appointed Assistant Professor at Osaka Metropolitan University. Her research focuses on explainable AI (XAI) and evolutionary fuzzy systems, specifically developing interpretable AI frameworks for safe human-centric applications.</div>
-                <a href="https://pickerln.github.io/" class="organizer-link" target="_blank">Personal Website →</a>
+                <!-- <a href="https://pickerln.github.io/" class="organizer-link" target="_blank">Personal Website →</a> -->
             </div>
         </div>
     
         <div class="organizer-card">
             <img src="javier-andreu.jpg" alt="Javier Andreu-Perez" class="organizer-img">
             <div class="organizer-info">
-                <div class="organizer-name">Javier Andreu-Perez</div>
+                <a href="https://www.essex.ac.uk/people/ANDRE09407/Javier-Andreu-Perez" class="organizer-name" target="_blank">Javier Andreu-Perez</a>
+                <!-- <div class="organizer-name">Javier Andreu-Perez</div> -->
                 <div class="organizer-bio">Reader (Associate Professor) in Human-Centred AI at the University of Essex and Chair of the Smart Health Technologies Group. A Senior Member of the IEEE, his research spans fundamental AI, healthcare informatics, and robotics.</div>
-                <a href="https://www.essex.ac.uk/people/ANDRE09407/Javier-Andreu-Perez" class="organizer-link" target="_blank">University Profile →</a>
+                <!-- <a href="https://www.essex.ac.uk/people/ANDRE09407/Javier-Andreu-Perez" class="organizer-link" target="_blank">University Profile →</a> -->
             </div>
         </div>
     
         <div class="organizer-card">
             <img src="yusuke-nojima.jpg" alt="Yusuke Nojima" class="organizer-img">
             <div class="organizer-info">
-                <div class="organizer-name">Yusuke Nojima</div>
-                <div class="organizer-bio">Professor and Vice-Dean of Graduate School of Informatics at Osaka Metropolitan University. He specializes in evolutionary fuzzy systems and multiobjective optimization. He is currently the International Fuzzy Systems Association (IFSA) President-Elect.</div>
-                <a href="https://yusuke-nojima.github.io/" class="organizer-link" target="_blank">Personal Website →</a>
+                <a href="https://yusuke-nojima.github.io/" class="organizer-name" target="_blank">Yusuke Nojima</a>
+                <!-- <div class="organizer-name">Yusuke Nojima</div> -->
+                <div class="organizer-bio">Professor and Vice-Dean of Graduate School of Informatics at Osaka Metropolitan University. He specializes in evolutionary fuzzy systems and multiobjective optimization and is currently the International Fuzzy Systems Association (IFSA) President-Elect.</div>
+                <!-- <a href="https://yusuke-nojima.github.io/" class="organizer-link" target="_blank">Personal Website →</a> -->
             </div>
         </div>
     </div>
